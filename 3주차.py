@@ -1,4 +1,5 @@
-# 공넣기
+# 공넣기 10810번
+
 # 문제
 # 도현이는 바구니를 총 N개 가지고 있고, 각각의 바구니에는 1번부터 N번까지 번호가 매겨져 있다. 또, 1번부터 N번까지 번호가 적혀있는 공을 매우 많이 가지고 있다.
 # 가장 처음 바구니에는 공이 들어있지 않으며, 바구니에는 공을 1개만 넣을 수 있다.
@@ -24,6 +25,39 @@
 # 예제 출력
 # 1 2 1 1 0
 
-M, N = map(int, input().split())
+# 정답
+# N, M = map(int, input().split())
+# int_list = []
+# for i in range(M):
+#   int_list.append([])
+# for i in range(M):
+#   int_list[i] = list(map(int, input().split()))
+# result = []
+# for i in range(N):
+#    result.append(0)
+# for g in range(len(int_list)):
+#   temp = []
+#   for i in range(int_list[g][1]+1 - int_list[g][0]):
+#     temp.append(int_list[g][2])
+#   result[int_list[g][0]-1:int_list[g][1]] = temp
+# print(*result)
 
+# 깔끔 정답
+# N, M = map(int, input().split())
+# int_list = [0] * N
+# for _ in range(M):
+#   I, J, K = map(int, input().split())
+#   int_list[I-1:J] = [K] * (J - I + 1)
+# print(*int_list)
 
+# 펠린드롬인지 확인하기 10988
+# 문제
+# 알파벳 소문자로만 이루어진 단어가 주어진다. 이때, 이 단어가 팰린드롬인지 아닌지 확인하는 프로그램을 작성하시오.
+# 팰린드롬이란 앞으로 읽을 때와 거꾸로 읽을 때 똑같은 단어를 말한다.
+# level, noon은 팰린드롬이고, baekjoon, online, judge는 팰린드롬이 아니다.
+
+#입력
+# 첫째 줄에 단어가 주어진다. 단어의 길이는 1보다 크거나 같고, 100보다 작거나 같으며, 알파벳 소문자로만 이루어져 있다.
+
+#출력
+첫째 줄에 팰린드롬이면 1, 아니면 0을 출력한다.
